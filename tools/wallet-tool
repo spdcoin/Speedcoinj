@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -e
+
+# Check if the jar has been built.
+if [ ! -e target/speedcoinj-tools-*.jar ] || [[ "$ALWAYS_BUILD_WALLETTOOL" != "" ]]; then
+  echo "Compiling WalletTool to a JAR"
+  cd ../core
+  mvn install -DskipTests
+  cd ../tools
+  [ -e target/speedcoinj-tools-*.jar ] && rm target/speedcoinj-tools-*.jar
+  mvn package -DskipTests
+fi
+
+java -server -jar target/speedcoinj-tools-*.jar $*

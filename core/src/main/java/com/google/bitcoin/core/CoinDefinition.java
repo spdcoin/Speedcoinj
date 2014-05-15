@@ -172,6 +172,8 @@ public class CoinDefinition {
 	checkpoints.put(1085,  new Sha256Hash("02549996d5e46822f2ae892abdbdc87c191d932d39bc861f586c7aafaa774965")); 
 	checkpoints.put(12000, new Sha256Hash("bfb475d470f769790aa69b46a5edd1b7d30660c7850966b3e327d88fb234cefa")); 
 	checkpoints.put(19310, new Sha256Hash("69017a60e2adc4a1ca47964cd5efd32134eaf4239e7d44cba7c39e61ad553c88")); 
+	checkpoints.put(26000, new Sha256Hash("168cd2a090d0e875898c531baebae14ece39988182baf3eab6d58a35a0f1b8f4")); 
+	checkpoints.put(35400, new Sha256Hash("d6c86364d90a542b67a89f1bd4741c62a103822d02fd1633f96a3b74387c9b75")); 
     }
 
 

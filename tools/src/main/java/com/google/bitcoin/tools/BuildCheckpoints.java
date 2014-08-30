@@ -37,7 +37,6 @@ public class BuildCheckpoints {
         final BlockChain chain = new BlockChain(params, store);
         final PeerGroup peerGroup = new PeerGroup(params, chain);
 
-        //peerGroup.addAddress(/*InetAddress.getLocalHost()*/InetAddress.getByName("ca1.miningpool.co"));
         peerGroup.addAddress(InetAddress.getLocalHost());
         long now = new Date().getTime() / 1000;
         peerGroup.setFastCatchupTimeSecs(now);
@@ -49,8 +48,7 @@ public class BuildCheckpoints {
             public void notifyNewBestBlock(StoredBlock block) throws VerificationException {
                 int height = block.getHeight();
                 if (height % CoinDefinition.getIntervalForCheckpoints(height, false) == 0 &&
-                        block.getHeader().getTimeSeconds() <= oneMonthAgo /*&&
-                        block.getHeight() < CoinDefinition.nDifficultySwitchHeightTwo - 4033*/) {
+                        block.getHeader().getTimeSeconds() <= oneMonthAgo) {
                     System.out.println(String.format("Checkpointing block %s at height %d: diff %08x",
                             block.getHeader().getHash(), block.getHeight(), block.getHeader().getDifficultyTarget()));
                     checkpoints.put(height, block);
@@ -94,8 +92,8 @@ public class BuildCheckpoints {
         // Sanity check the created file.
         CheckpointManager manager = new CheckpointManager(params, new FileInputStream("checkpoints"));
         checkState(manager.numCheckpoints() == checkpoints.size());
-        StoredBlock test = manager.getCheckpointBefore(1400090710);  // Just after block 35000, time 14/5/2014 19:05:10
-        checkState(test.getHeight() == 35000);
-        checkState(test.getHeader().getHashAsString().equals("655d8a69c08613429d1fc05c72b364b0462fbfe64b5f8d33b6892cae265d88b1"));
+        StoredBlock test = manager.getCheckpointBefore(1409418557);  // Just after block 188055 (+55 blocks), time 2014-08-30 18:09:17
+        checkState(test.getHeight() == 188000);
+        checkState(test.getHeader().getHashAsString().equals("70ea35cdbcc5bd380911164da1c06b2b52c2039d3c62b93acaff1110e59ba44b"));
     }
 }

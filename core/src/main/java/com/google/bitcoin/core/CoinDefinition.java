@@ -170,10 +170,13 @@ public class CoinDefinition {
     {
     checkpoints.put(0,     new Sha256Hash("faeaebb8e401dbd2c5af9a82a6594b9fd58f1fbd9f7b6aa950cbd10494192cd6")); 
 	checkpoints.put(1085,  new Sha256Hash("02549996d5e46822f2ae892abdbdc87c191d932d39bc861f586c7aafaa774965")); 
-	checkpoints.put(12000, new Sha256Hash("bfb475d470f769790aa69b46a5edd1b7d30660c7850966b3e327d88fb234cefa")); 
 	checkpoints.put(19310, new Sha256Hash("69017a60e2adc4a1ca47964cd5efd32134eaf4239e7d44cba7c39e61ad553c88")); 
-	checkpoints.put(26000, new Sha256Hash("168cd2a090d0e875898c531baebae14ece39988182baf3eab6d58a35a0f1b8f4")); 
 	checkpoints.put(35400, new Sha256Hash("d6c86364d90a542b67a89f1bd4741c62a103822d02fd1633f96a3b74387c9b75")); 
+	checkpoints.put(71100, new Sha256Hash("ff34b69286bd8ed4b64bfdc47316c641c51a9210eac152f18d897de2ce75aa42")); 
+	checkpoints.put(107830, new Sha256Hash("3a7c1df5103028df352f626e009831e3414e32ebfe06a524af6ab4b250466dd4")); 
+	checkpoints.put(138940, new Sha256Hash("5d54fa41cab71b9013e2b4bf74851ebc7026321049a0bb026700ebd5193fbb35")); 
+	checkpoints.put(165520, new Sha256Hash("7e1950b600bc2ca08a69752df7af8ae83a13840999588224bfb79a17ac76f720")); 
+	checkpoints.put(188000, new Sha256Hash("70ea35cdbcc5bd380911164da1c06b2b52c2039d3c62b93acaff1110e59ba44b")); 
     }
 
 

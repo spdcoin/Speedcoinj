@@ -320,7 +320,7 @@ public abstract class NetworkParameters implements Serializable {
         return true;
     }
 
-    /** How many blocks pass between difficulty adjustment periods. Bitcoin standardises this to be 2015. */
+    /** How many blocks pass between difficulty adjustment periods. Bitcoin standardises this to be 2017. */
     public int getInterval() {
         return interval;
     }

@@ -718,7 +718,7 @@ public class PeerGroup extends AbstractExecutionThreadService implements Transac
             // Now adjust the earliest key time backwards by a week to handle the case of clock drift. This can occur
             // both in block header timestamps and if the users clock was out of sync when the key was first created
             // (to within a small amount of tolerance).
-            earliestKeyTimeSecs -= 86400 * 7;
+            earliestKeyTimeSecs -= 86400;
 
             // Do this last so that bloomFilter is already set when it gets called.
             setFastCatchupTimeSecs(earliestKeyTimeSecs);
